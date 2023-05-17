@@ -1,12 +1,11 @@
-#gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.container{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
 }
-
-#gallery img {
-  width: 300px;
-  height: 200px;
-  margin: 10px;
+.container img{
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  object-position: center;
 }
