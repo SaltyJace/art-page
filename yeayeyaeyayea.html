@@ -6,17 +6,10 @@
   </head>
 <body>
 
-    <div class="row">
-        <div class="col">
            <img src="img/img3.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Toy car on the road." />
-        </div>
-      
-      <!-- This is your lightbox, it is contained in a modal. Here you provide all the images,
-           controls, and another set of preview images as the dots. Dots show your user which
-           image is currently active. Note that you use entities (e.g. &times;), more info on
-           them at the bottom. -->
-           
+             
       <div id="Lightbox" class="modal">
+        <div class="modal-grid">
         <span class="close pointer" onclick="closeLightbox()">&times;</span>
         <div class="modal-content">
           <div class="slide">
@@ -43,9 +36,16 @@
             </div>
           </div>
         </div>
-      </div>
-
-    </div>
+        <div class="modal-description">
+          <h2>Lorem</h2>
+          <h3>Lorem Ipsum</h3>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        
     <script>
     // Initialize here and run showSlide() to give your lightbox a default state.
 

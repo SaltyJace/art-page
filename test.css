@@ -1,4 +1,28 @@
-/* Here you provide a best practice's "reset", read more about it at the bottom! :) */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  
+}
+:root{
+  --main-color:#ffffff;
+  --highlight-color:#ff2350;
+  --text-color:#fff;
+  --bg-color:#191824;
+  --trans-color:#1e1c2af3;
+  --big-font:5rem;
+  --h2-font:2vw;
+  --h3-font:1vw;
+  --p-font:.8vw;
+}
+*::selection {
+  background: var(--highlight-color);
+  color:#fff;
+}
 
 html {
     box-sizing: border-box;
@@ -19,7 +43,6 @@ html {
     
 }
 
-  
   /* You define the style of our previews here, you are using flex to display the images 
      "responsively". */
   
@@ -50,7 +73,7 @@ html {
     display: none;
     position: fixed;
     z-index: 1;
-    padding: 10px 62px 0px 62px;
+    padding: 2vh 2vw 0vh 2vw;
     left: 0;
     top: 0;
     width: 100%;
@@ -58,6 +81,15 @@ html {
     overflow: auto;
     background-color: rgba(0, 0, 0, .7);
   }
+
+  .modal-grid{
+    padding: .5vw;
+    display: grid;
+    grid-template-columns: 70vw 1fr;
+    column-width: 10vw;
+    background-color: rgb(36, 29, 50);
+  }
+  
   
   .modal-content {
     position: relative;
@@ -66,24 +98,24 @@ html {
     justify-content: center;
     margin: auto;
     padding: 0 0 0 0;
-    width: 80%;
-    max-width: 1200px;
-    outline: 1px red dotted;
+    width: 70vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, .4);
   }
   
   /* Same with your slides, you set the display to none, because you want to choose which 
      one is shown at a time. */
   
   .slide {
-    display: none;
-    outline: 1px green dotted;
+    display: flex;
     justify-content: center;
     margin: auto;
   }
   .slide img{
-    height: 75vh;
+    height: auto;
+    max-height: 69vh;
     width: auto;
-    outline: 1px purple dotted;
+    max-width: 65vw;
   }
   .image-slide {
     width: 100%;
@@ -94,13 +126,15 @@ html {
   }
   
   .dots {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: .5vw;
     margin: auto;
   }
   .dots img{
     height: 15vh;
     width: auto;
+    object-fit: cover;
   }
   
   /* You want the previews a little transparent to show that they are "inactive". 
@@ -163,4 +197,24 @@ html {
   .previous:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-description{
+    width: 20vw;
+    height:auto;
+    margin: auto;
+    display: grid;
+    grid-template-areas: repeat(1fr);
+  }
+  .modal-description h2{
+    color: var(--main-color);
+    font-size: var(--h2-font);
+  }
+  .modal-description h3{
+    color: var(--highlight-color);
+    font-size: var(--h3-font);
+  }
+  .modal-description p{
+    color: var(--text-color);
+    font-size: var(--p-font);
   }
